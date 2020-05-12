@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}My tasks{% endblock title%}
+
+{% block content%}
+<br><br><br>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form action="" method="POST" class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" placeholder="Zaplanuj zadanie" name="task" >
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Zapisz</button>
+            </form>
+            {% if task %}
+                <br>
+                <ul>
+                    <li>{{ task }}</li>
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
